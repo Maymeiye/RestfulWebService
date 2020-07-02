@@ -2,6 +2,10 @@ package site.meiye.RestfulWebService.ui.controller;
 
 
 import org.springframework.web.bind.annotation.*;
+import site.meiye.RestfulWebService.ui.model.request.UserDetailsRequestModel;
+import site.meiye.RestfulWebService.ui.model.response.UserRest;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("users")// http://localhost:8080/users
@@ -13,8 +17,9 @@ public class UserController {
     }
 
     @PostMapping
-    public String createUser(){
-        return "create user was called";
+    public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails){
+
+        return null;
     }
 
     @PutMapping
