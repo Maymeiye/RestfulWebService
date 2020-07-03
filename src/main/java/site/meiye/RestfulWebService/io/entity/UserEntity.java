@@ -1,19 +1,36 @@
-package site.meiye.RestfulWebService.shared.dto;
+package site.meiye.RestfulWebService.io.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
-public class UserDto implements Serializable {
+@Entity(name="users")
+public class UserEntity implements Serializable {
 
-    private static final long serialVersionUID = -2055505026254914951L;
-    private long id;
+    private static final long serialVersionUID = -3312956385068404691L;
+
+    @Id
+    @GeneratedValue
+    private  long id;
+
+    @Column(nullable = false)
     private String userId;
+
+    @Column(nullable = false, length = 50)
     private String firstName;
-    private String lastName;
+
+    @Column(nullable = false, length = 50)
+    private String laseName;
+
+    @Column(nullable = false, length =  120)
     private String email;
-    private String password;
+
+    @Column(nullable = false)
     private String encryptedPassword;
+
     private String emailVerificationToken;
-    private Boolean emailVerificationStatus = false;
+
+    @Column(nullable = false)
+    private Boolean getEmailVerificationStatus = false;
 
     public long getId() {
         return id;
@@ -39,12 +56,12 @@ public class UserDto implements Serializable {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLaseName() {
+        return laseName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLaseName(String laseName) {
+        this.laseName = laseName;
     }
 
     public String getEmail() {
@@ -53,14 +70,6 @@ public class UserDto implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getEncryptedPassword() {
@@ -79,11 +88,11 @@ public class UserDto implements Serializable {
         this.emailVerificationToken = emailVerificationToken;
     }
 
-    public Boolean getEmailVerificationStatus() {
-        return emailVerificationStatus;
+    public Boolean getGetEmailVerificationStatus() {
+        return getEmailVerificationStatus;
     }
 
-    public void setEmailVerificationStatus(Boolean emailVerificationStatus) {
-        this.emailVerificationStatus = emailVerificationStatus;
+    public void setGetEmailVerificationStatus(Boolean getEmailVerificationStatus) {
+        this.getEmailVerificationStatus = getEmailVerificationStatus;
     }
 }

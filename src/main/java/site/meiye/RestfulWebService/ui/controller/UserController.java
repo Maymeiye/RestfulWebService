@@ -19,7 +19,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-
     @GetMapping
     public String getUser(){
         return "get user was called";
