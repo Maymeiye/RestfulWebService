@@ -1,9 +1,5 @@
 package site.meiye.RestfulWebService.ui.model.request;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-
 public class UserDetailsRequestModel {
 
     private String firstName;

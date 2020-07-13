@@ -3,7 +3,7 @@ package site.meiye.RestfulWebService.ui.model.response;
 public class UserRest {
 
     private String userId;
-    private String fistName;
+    private String firstName;
     private String lastName;
     private String email;
 
@@ -15,12 +15,12 @@ public class UserRest {
         this.userId = userId;
     }
 
-    public String getFistName() {
-        return fistName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFistName(String fistName) {
-        this.fistName = fistName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {

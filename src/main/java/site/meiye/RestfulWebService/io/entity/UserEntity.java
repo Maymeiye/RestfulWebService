@@ -1,6 +1,10 @@
 package site.meiye.RestfulWebService.io.entity;
 
-import javax.persistence.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity(name="users")
@@ -19,7 +23,7 @@ public class UserEntity implements Serializable {
     private String firstName;
 
     @Column(nullable = false, length = 50)
-    private String laseName;
+    private String lastName;
 
     @Column(nullable = false, length =  120)
     private String email;
@@ -30,7 +34,7 @@ public class UserEntity implements Serializable {
     private String emailVerificationToken;
 
     @Column(nullable = false)
-    private Boolean getEmailVerificationStatus = false;
+    private Boolean emailVerificationStatus = false;
 
     public long getId() {
         return id;
@@ -56,12 +60,12 @@ public class UserEntity implements Serializable {
         this.firstName = firstName;
     }
 
-    public String getLaseName() {
-        return laseName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLaseName(String laseName) {
-        this.laseName = laseName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -88,11 +92,11 @@ public class UserEntity implements Serializable {
         this.emailVerificationToken = emailVerificationToken;
     }
 
-    public Boolean getGetEmailVerificationStatus() {
-        return getEmailVerificationStatus;
+    public Boolean getEmailVerificationStatus() {
+        return emailVerificationStatus;
     }
 
-    public void setGetEmailVerificationStatus(Boolean getEmailVerificationStatus) {
-        this.getEmailVerificationStatus = getEmailVerificationStatus;
+    public void setEmailVerificationStatus(Boolean emailVerificationStatus) {
+        this.emailVerificationStatus = emailVerificationStatus;
     }
 }
